@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-primary: #0369a1;
+  --brand-secondary: #2563eb;
 }
 
 @theme inline {
@@ -12,10 +14,22 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 78px;
+}
+
+section[id] {
+  scroll-margin-top: 78px;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 88px;
+  }
+
+  section[id] {
+    scroll-margin-top: 88px;
   }
 }
 
@@ -23,4 +37,116 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes divider-sweep {
+  0% {
+    transform: translateX(-12%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(50%);
+    opacity: 0.95;
+  }
+
+  100% {
+    transform: translateX(112%);
+    opacity: 0;
+  }
+}
+
+@keyframes divider-pulse {
+
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleX(0.96);
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes brand-marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes brand-marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease both;
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-divider-sweep {
+  animation: divider-sweep 5.8s linear infinite;
+}
+
+.animate-divider-pulse {
+  animation: divider-pulse 4.2s ease-in-out infinite;
+}
+
+.animate-brand-marquee-left {
+  animation: brand-marquee-left 28s linear infinite;
+}
+
+.animate-brand-marquee-right {
+  animation: brand-marquee-right 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-brand-marquee-left,
+  .animate-brand-marquee-right {
+    animation: none;
+    transform: translateX(0);
+  }
 }
