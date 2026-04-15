@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Secure Zone",
-  description: "Professional technical services for networking, smart home, SMATV, PA and integrated solutions",
+  title: "SecureZone Technical",
+  description: "SecureZone Technical provides networking, smart home, SMATV, PA and integrated technical services.",
+  keywords: ["security", "technical services", "Dubai"],
   icons: {
     icon: [],
   },
@@ -22,9 +23,6 @@ export const metadata: Metadata = {
     email: false,
     address: false,
     telephone: false,
-  },
-  other: {
-    "format-detection": "telephone=no, date=no, email=no, address=no",
   },
 };
 
