@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Secure Zone",
   description: "Professional technical services for networking, smart home, SMATV, PA and integrated solutions",
+  icons: {
+    icon: [],
+  },
   formatDetection: {
     email: false,
     address: false,
