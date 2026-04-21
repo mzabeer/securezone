@@ -51,7 +51,7 @@ export default function Contact() {
     const [status, setStatus] = useState<"idle" | "valid" | "invalid">("idle");
     const [isCallOptionsOpen, setIsCallOptionsOpen] = useState(false);
     const managerPhone = "+971556175765";
-    const projectManagerPhone = "+971507841754";
+    const projectManagerPhone = "+971541793004";
 
     useEffect(() => {
         if (status !== "invalid" && status !== "valid" && Object.keys(errors).length === 0) {
@@ -157,10 +157,10 @@ export default function Contact() {
                                 <UserRound className="h-4 w-4 text-sky-600" /> Mohammed Safwan
                             </p>
                             <a
-                                href="tel:+971507841754"
+                                href="tel:+971541793004"
                                 className="mt-2 flex items-center gap-3 text-sm font-semibold text-sky-700 transition-colors hover:text-sky-800"
                             >
-                                <Phone className="h-4 w-4 text-sky-600" /> +971 50 784 1754
+                                <Phone className="h-4 w-4 text-sky-600" /> +971 54 179 3004
                             </a>
                         </div>
 

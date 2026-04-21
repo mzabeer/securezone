@@ -19,12 +19,6 @@ const agents: Agent[] = [
         phone: "971556175765",
         emoji: "🧑‍💼",
     },
-    {
-        name: "Mohammed Safwan",
-        role: "Project Engineer",
-        phone: "971507841754",
-        emoji: "👷",
-    },
 ];
 
 function getWhatsAppLink(phone: string, message: string) {
